@@ -3,5 +3,5 @@
 	filemode = true
 	bare = true
 [remote "origin"]
-	url = evan70/hotel
+	url = evan70/sapper-svelte-hotel
 	fetch = +refs/heads/*:refs/remotes/origin/*
