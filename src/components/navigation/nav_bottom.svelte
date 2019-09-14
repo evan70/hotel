@@ -281,7 +281,7 @@
           class={segment === 'rooms' ? 'selected' : ''}
           href="rooms"
           on:click={toggleNavigation}>
-          Номера
+          Numbers
         </a>
         <ul class="submenu">
           <li>
@@ -289,7 +289,7 @@
               class={path === 'booking' ? 'selected' : ''}
               href="rooms/booking"
               on:click={toggleNavigation}>
-              Резервация
+              Reservation
             </a>
           </li>
         </ul>
@@ -299,7 +299,7 @@
           class={segment === 'about' ? 'selected' : ''}
           href="about"
           on:click={toggleNavigation}>
-          Про отель
+          About Us
         </a>
         <ul class="submenu">
           <li>
@@ -307,7 +307,7 @@
               class={path === 'contact' ? 'selected' : ''}
               href="about/contact"
               on:click={toggleNavigation}>
-              Контакты
+              Contacts
             </a>
           </li>
           <li>
@@ -315,7 +315,7 @@
               class={path === 'services' ? 'selected' : ''}
               href="about/services"
               on:click={toggleNavigation}>
-              Услуги
+              Services
             </a>
           </li>
           <li>
@@ -323,7 +323,7 @@
               class={path === 'gallery' ? 'selected' : ''}
               href="about/gallery"
               on:click={toggleNavigation}>
-              Галерея
+              Gallery
             </a>
           </li>
         </ul>

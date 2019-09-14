@@ -27,12 +27,12 @@
 </style>
 
 <footer>
-  <a href="https://github.com/altorik13/TGFV_finalProject" target="_blank">
+  <a href="https://github.com/evan70/sapper-svelte-hotel" target="_blank">
     GIT
   </a>
   <span>
-    Made for TGFN University final project
+    Made for some fun
     <i class="far fa-copyright" />
-    Alex Revchuk
+    Evan70
   </span>
 </footer>
