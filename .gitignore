@@ -1,3 +1,7 @@
+# ignore all files and dirs with this names
+img/*
+fonts/*
+prod/*
 .vscode
 _task
 .DS_Store
