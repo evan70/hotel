@@ -30,38 +30,37 @@
   }
 </script>
 
-<style>
-  nav {
-    cursor: pointer;
-    position: fixed;
-    height: 2rem;
-    width: 2rem;
-    line-height: 2rem;
-    text-align: center;
-    right: 1.5rem;
-    color: #443941;
-    transition: all 0.4s;
-    bottom: 0;
-    opacity: 0;
-  }
-  nav:hover {
-    color: #f2f2f2;
-    background: #444b57;
-    transform: scale(1.1);
-    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.2);
-  }
-  nav:active {
-    transform: scale(1);
+<style lang="stylus">
+  nav
+    cursor pointer
+    position fixed
+    height 2rem
+    width 2rem
+    line-height 2rem
+    text-align center
+    right 1.5rem
+    color #443941
+    transition all 0.4s
+    bottom 0
+    opacity 0
+  
+  nav:hover
+    color #f2f2f2
+    background #444b57
+    transform scale(1.1)
+    box-shadow 2px 3px 4px rgba(0, 0, 0, 0.2)
+  
+  nav:active
+    transform scale(1)
 
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
-  }
-  .shown {
-    bottom: 1rem;
-    opacity: 1;
-  }
-  .bottom {
-    bottom: 3rem;
-  }
+    box-shadow 0px 1px 4px rgba(0, 0, 0, 0.1)
+
+  .shown
+    bottom 1rem
+    opacity 1
+
+  .bottom
+    bottom 3rem
 </style>
 
 <svelte:window bind:scrollY={y} />
