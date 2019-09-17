@@ -42,35 +42,31 @@
   }
 </script>
 
-<style lang="scss">
-  nav {
-    padding: 0.25rem 0;
-    font-size: 0.9rem;
-    color: #9f9f9f;
-    line-height: 2rem;
-    position: relative;
-    top: -1rem;
-  }
-  li {
-    a {
-      color: inherit;
-    }
-    cursor: pointer;
-    margin-right: 0.25em;
-    vertical-align: top;
-    display: inline-block;
-    &::after {
-      margin-left: 0.5em;
-      margin-right: 0.25em;
-      content: ">";
-    }
-    &:last-child {
-      &::after {
-        content: "";
-        display: none;
-      }
-    }
-  }
+<style lang="stylus">
+  nav
+    padding 0.25rem 0
+    font-size 0.9rem
+    color #9f9f9f
+    line-height 2rem
+    position relative
+    top -1rem
+  
+  li
+    a
+      color inherit
+    
+    cursor pointer
+    margin-right 0.25em
+    vertical-align top
+    display inline-block
+    &::after
+      margin-left 0.5em
+      margin-right 0.25em
+      content: ">"
+    &:last-child
+      &::after
+        content ""
+        display none
 </style>
 
 {#if path.length > 0 && segment}

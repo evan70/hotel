@@ -51,94 +51,74 @@
   }
 </script>
 
-<style lang="scss">
-  .slider {
-    height: 100vh;
-    width: 101vw;
-    background: #444b57;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+<style lang="stylus">
+  .slider
+    height 100vh
+    width 101vw
+    background #444b57
+    position relative
+    left 50%
+    transform translateX(-50%)
 
-    display: flex;
-    overflow: hidden;
-    &::after {
-      position: absolute;
-      z-index: 1;
-      display: block;
-      content: "";
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(0, 0, 0, 0.4);
-    }
+    display flex
+    overflow hidden
+    &::after
+      position absolute
+      z-index 1
+      display block
+      content ""
+      top 0
+      bottom 0
+      left 0
+      right 0
+      background rgba(0, 0, 0, 0.4)
 
-    img {
-      object-fit: cover;
-      width: 100%;
+    img
+      object-fit cover
+      width 100%
       //firefox fix below
-      flex-shrink: 0;
-      flex-basis: 101vw;
-    }
+      flex-shrink 0
+      flex-basis 101vw
+    
+    &__button
+      display block
+      position absolute
+      top 50%
+      transform translateY(-50%)
+      z-index 3
 
-    &__button {
-      display: block;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 3;
+      width 6em
+      height 100%
+      background #444b57
+      opacity 0.05
+      cursor pointer
+      transition all 0.5s
 
-      width: 6em;
-      height: 100%;
-      background: #444b57;
-      opacity: 0.05;
-      cursor: pointer;
-      transition: all 0.5s;
-
-      &:hover {
-        opacity: 0.15;
-      }
-
-      &-left {
-        left: 0.5em;
-      }
-
-      &-right {
-        right: 0.5em;
-      }
-    }
-    &__text {
-      :global(*) {
-        color: #f2f2f2;
-        max-width: 50rem;
-      }
-      font-size: 1.5em;
-      color: #f2f2f2;
-      position: absolute;
-      text-align: center;
-      max-width: 50rem;
-      top: 50%;
-      left: 50%;
-      transform: translateY(-50%) translateX(-50%);
-      z-index: 2;
-    }
-  }
-
-  .transition {
-    img {
-      transition: margin 0.9s ease-in;
-    }
-  }
-
-  @for $i from 1 through 10 {
-    .slide#{$i} {
-      img {
-        margin-left: #{$i * -100%};
-        margin-right: #{$i * 100%};
-      }
-    }
-  }
+      &:hover
+        opacity 0.15
+      &-left
+        left 0.5em
+      &-right
+        right 0.5em
+    
+    &__text
+      :global(*)
+        color #f2f2f2
+        max-width 50rem
+      
+      font-size 1.5em
+      color #f2f2f2
+      position absolute
+      text-align center
+      max-width 50rem
+      top 50%
+      left 50%
+      transform translateY(-50%) translateX(-50%)
+      z-index 2
+  
+  .transition
+    img
+      transition margin 0.9s ease-in
 </style>
 
 <div class="slider {transition ? 'transition' : ''} slide{sliderScroll}">

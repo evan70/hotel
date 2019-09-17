@@ -6,39 +6,38 @@
   export let segment;
 </script>
 
-<style lang="scss">
-  h1 {
-    text-align: center;
-    color: inherit;
-    font-size: 2.8em;
-    text-transform: uppercase;
-    margin: 0 0 0.5em 0;
-  }
-  section {
-    position: relative;
-  }
+<style lang="stylus">
+  h1
+    text-align center
+    color inherit
+    font-size 2.8em
+    text-transform uppercase
+    margin 0 0 0.5em 0
+
+  section
+    position relative
+
   .nav,
-  .logo {
-    position: absolute;
-    z-index: 100;
-  }
-  .nav {
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  }
-  .logo {
-    left: 50%;
-    transform: translateX(-50%) scale(1.4);
-    top: 10vh;
-  }
-  .container :global(footer) {
-    padding-top: 5rem;
-    padding-bottom: 2rem;
-    font-size: 1rem;
-    background: #2172eb;
-    color: #f2f2f2;
-  }
+  .logo 
+    position absolute
+    z-index 100
+
+  .nav
+    bottom 0
+    left 0
+    width 100%
+  
+  .logo
+    left 50%
+    transform translateX(-50%) scale(1.4)
+    top 10vh
+  
+  .container :global(footer)
+    padding-top 5rem
+    padding-bottom 2rem
+    font-size 1rem
+    background #2172eb
+    color #f2f2f2
 </style>
 
 <svelte:head>
