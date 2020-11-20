@@ -42,7 +42,6 @@
       transition: all 0.4s;
       position: absolute;
       height: 100%;
-      // width: 100%;
       top: 5%;
       left: 5%;
       width: 90%;
