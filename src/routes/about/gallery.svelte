@@ -19,10 +19,7 @@
   }
   figure {
     margin: 1.25rem 0.65rem;
-    //минимальный зазор чтобы пр ховере не прикасаться - 0.5
     width: 300px;
-    //вместе с паддингом
-    // при наведении 300, в покое 300 - 1rem
     position: relative;
     display: block;
     cursor: pointer;
@@ -97,7 +94,7 @@
   }
 </style>
 
-<h1>Галерея</h1>
+<h1>Galéria</h1>
 
 <div class="gallery">
   {#each imageList as img, index}
@@ -109,7 +106,7 @@
 </div>
 
 <svelte:head>
-  <title>Pris - Галерея</title>
+  <title>Hotel - Galéria</title>
 </svelte:head>
 
 <Modal {modalContent} />
