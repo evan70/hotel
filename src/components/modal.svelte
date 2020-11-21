@@ -139,11 +139,16 @@
     right -2rem
     background linear-gradient(270deg, white 40%, rgba(0, 0, 0, 0) 100%)
 
-  @for $i from 0 through 20
-    .active_slide#{$i}
+  
+
+// 0 through 20
+
+  
+  for i in 0..20
+    .active_slide#({i})
       img
-        margin-left #{$i * -5rem + 12rem}
-        margin-right #{$i * 5rem - 12rem}
+        margin-left #(i * -5rem + 12rem)
+        margin-right #(i * 5rem - 12rem)
 </style>
 
 <svelte:window bind:scrollY={y} />
