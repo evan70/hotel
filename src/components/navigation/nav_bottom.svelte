@@ -47,8 +47,8 @@
   }
 </script>
 
-<style lang="scss">
-  header {
+<style lang="stylus">
+  header
     width: 100%;
     border-bottom: 0.15em solid #eb9a21;
     background: #444b57;
@@ -58,17 +58,17 @@
     justify-content: center;
     padding: 1rem 2rem;
 
-    @media (min-width: 1680px) {
+    @media (min-width: 1680px)
       padding: 1rem 10vw;
-    }
-    @media (max-width: 999px) {
+ 
+    @media (max-width: 999px)
       z-index: 999;
       transition: all 0.2s ease-in-out;
       height: 8vh;
       min-height: 5rem;
       bottom: 0;
       left: 0;
-      &.shown {
+      &.shown
         bottom: 0;
         left: 0;
         width: 100vw;
@@ -77,38 +77,33 @@
         position: fixed;
         align-items: flex-start;
 
-        nav > ul {
+        nav > ul
           position: absolute;
           left: 2rem;
           top: 6rem;
           display: block;
-        }
 
-        .nav-show {
+
+        .nav-show
           position: relative;
           top: 0.75rem;
           right: 0.5rem;
-          span {
-            &:first-child {
+          span
+            &:first-child
               top: 10px;
               transform: rotate(45deg);
-            }
-            &:nth-child(2) {
+
+            &:nth-child(2)
               transition: all 0.2s;
               opacity: 0;
-            }
-            &:last-child {
+
+            &:last-child
               width: 45px;
               top: -10px;
               transform: rotate(-45deg);
-            }
-          }
-        }
-      }
-    }
-  }
 
-  nav {
+
+  nav
     font-size: 1.4rem;
 
     display: flex;
@@ -116,35 +111,32 @@
     justify-content: center;
     font-weight: 400;
 
-    > ul {
-      @media (max-width: 999px) {
+    > ul
+      @media (max-width: 999px)
         display: none;
         font-size: 1.4rem;
-        a {
+        a
           display: inline-block;
-        }
-        > li {
+
+        > li
           display: block;
-          > ul {
+          > ul
             margin-left: 1rem;
-          }
-        }
-      }
-      @media (min-width: 1000px) {
+
+      @media (min-width: 1000px)
         position: relative;
         display: flex;
-        > li {
+        > li
           z-index: 999;
           position: relative;
-          &:hover {
-            > ul {
+          &:hover
+            > ul
               opacity: 1;
               pointer-events: all;
               
               border-bottom: .05rem solid #eb9a21;
-            }
-          }
-          > ul {
+
+          > ul
             display: block;
             transition: opacity 0.5s;
             opacity: 0;
@@ -157,25 +149,21 @@
 
             display: flex;
             flex-direction: column;
-            a {
+            a
               min-width: 100%;
               text-align: left;
-            }
-          }
-        }
-      }
-    }
 
-    .nav-show {
+
+    .nav-show
       margin-left: 1em;
       display: block;
-      @media (min-width: 1000px) {
+      @media (min-width: 1000px)
         display: none;
-      }
+
       padding: 0.5rem;
       cursor: pointer;
 
-      span {
+      span
         position: relative;
         display: block;
         background: #f2f2f2;
@@ -184,21 +172,18 @@
         height: 5px;
         top: 0;
 
-        &:last-child {
+        &:last-child
           width: 30px;
-        }
-        &:nth-child(2) {
-          transition: all 0.8s;
-        }
-        &:first-child,
-        &:last-child {
-          transition: all 0.5s;
-        }
-      }
-    }
-  }
 
-  a {
+        &:nth-child(2)
+          transition: all 0.8s;
+
+        &:first-child,
+        &:last-child
+          transition: all 0.5s;
+
+
+  a
     background: none;
     border: 0px;
     outline: none;
@@ -213,7 +198,7 @@
     color: inherit;
     transition: all 0.4s;
 
-    &::after {
+    &::after
       transition: all 0.5s;
       position: absolute;
       left: 0;
@@ -225,44 +210,34 @@
       height: 0.1em;
       opacity: 0.5;
       margin-left: 5%;
-    }
-  }
 
-  @media (max-width: 999px) {
-    a:hover {
+  @media (max-width: 999px)
+    a:hover
       text-decoration: none;
-      &::after {
+      &::after
         opacity: 1;
         width: 90%;
         margin-left: 10%;
-      }
-    }
-  }
-  @media (min-width: 1000px) {
-    li:hover > a {
+
+  @media (min-width: 1000px)
+    li:hover > a
       text-decoration: none;
-      &::after {
+      &::after
         background: #dcb03f;
         opacity: 1;
         width: 70%;
         margin-left: 15%;
-      }
-    }
-  }
 
-  .selected {
-    &::after {
+  .selected
+    &::after
       opacity: 1;
       width: 80%;
       margin-left: 10%;
       background: #eb9a21;
-    }
-    &:hover {
-      &::after {
+
+    &:hover
+      &::after
         background: #dcb03f;
-      }
-    }
-  }
 </style>
 
 <svelte:window bind:scrollY={y} bind:innerWidth={x} />

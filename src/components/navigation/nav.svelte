@@ -58,8 +58,8 @@
   }
 </script>
 
-<style lang="scss">
-  header {
+<style lang="stylus">
+  header
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
     position: fixed;
     width: 100%;
@@ -72,14 +72,14 @@
     color: #f2f2f2;
 
     padding: 0.5rem 2rem;
-    @media (min-width: 1680px) {
+    @media (min-width: 1680px)
       padding: 1.5rem 10vw;
-    }
+
     align-items: center;
     justify-content: space-between;
-    @media (max-width: 999px) {
+    @media (max-width: 999px)
       transition: all 0.6s ease-in-out;
-      &.shown {
+      &.shown
         top: 0;
         left: 0;
         width: 100vw;
@@ -88,70 +88,59 @@
         position: fixed;
         align-items: flex-start;
 
-        nav > ul {
+        nav > ul
           position: absolute;
           left: 2rem;
           top: 6rem;
           display: block;
-        }
 
-        .nav-show {
+        .nav-show
           position: relative;
           top: 0.75rem;
           right: 0.5rem;
-          span {
-            &:first-child {
+          
+          span
+            &:first-child
               top: 10px;
               transform: rotate(45deg);
               width: 45px;
-            }
-            &:nth-child(2) {
+            &:nth-child(2)
               transition: all 0.2s;
               opacity: 0;
-            }
-            &:last-child {
+            &:last-child
               top: -10px;
               transform: rotate(-45deg);
-            }
-          }
-        }
-      }
-    }
-  }
 
-  nav {
+
+  nav
     display: flex;
     align-items: center;
     justify-content: flex-end;
     font-weight: 400;
 
-    > ul {
-      @media (max-width: 999px) {
+    > ul
+      @media (max-width: 999px)
         display: none;
         font-size: 1.4rem;
-        a {
+        a
           display: inline-block;
-        }
-        > li {
+        > li
           display: block;
-          > ul {
+          > ul
             margin-left: 1rem;
-          }
-        }
-      }
-      @media (min-width: 1000px) {
+
+      @media (min-width: 1000px)
         position: relative;
         display: flex;
-        > li {
+        > li
           z-index: 999;
           position: relative;
-          &:hover {
-            > ul {
+          &:hover
+            > ul
               opacity: 1;
               pointer-events: all;
-            }
-          }
-          > ul {
+
+          > ul
             display: block;
             transition: opacity 0.5s;
             opacity: 0;
@@ -164,25 +153,20 @@
 
             display: flex;
             flex-direction: column;
-            a {
+            a
               min-width: 100%;
               text-align: left;
-            }
-          }
-        }
-      }
-    }
 
-    .nav-show {
+    .nav-show
       margin-left: 1em;
       display: block;
-      @media (min-width: 1000px) {
+      @media (min-width: 1000px)
         display: none;
-      }
+
       padding: 0.5rem;
       cursor: pointer;
 
-      span {
+      span
         position: relative;
         display: block;
         background: #f2f2f2;
@@ -191,21 +175,18 @@
         height: 5px;
         top: 0;
 
-        &:first-child {
+        &:first-child
           width: 30px;
-        }
-        &:nth-child(2) {
-          transition: all 0.8s;
-        }
-        &:first-child,
-        &:last-child {
-          transition: all 0.5s;
-        }
-      }
-    }
-  }
 
-  a {
+        &:nth-child(2)
+          transition: all 0.8s;
+
+        &:first-child,
+        &:last-child
+          transition: all 0.5s;
+
+
+  a
     background: none;
     border: 0px;
     outline: none;
@@ -220,7 +201,7 @@
     color: inherit;
     transition: all 0.4s;
 
-    &::after {
+    &::after
       transition: all 0.5s;
       position: absolute;
       left: 0;
@@ -232,47 +213,40 @@
       height: 0.1em;
       opacity: 0.5;
       margin-left: 5%;
-    }
-  }
 
-  @media (max-width: 999px) {
-    a:hover {
+
+  @media (max-width: 999px)
+    a:hover
       text-decoration: none;
-      &::after {
+      &::after
         opacity: 1;
         width: 90%;
         margin-left: 10%;
-      }
-    }
-  }
-  @media (min-width: 1000px) {
-    li:hover > a {
+
+  @media (min-width: 1000px)
+    li:hover > a
       text-decoration: none;
-      &::after {
+      &::after
         background: #dcb03f;
         opacity: 1;
         width: 70%;
         margin-left: 15%;
-      }
-    }
-  }
 
-  .selected {
-    &::after {
+
+  .selected
+    &::after
       opacity: 1;
       width: 80%;
       margin-left: 10%;
       background: #eb9a21;
-    }
-    &:hover {
-      &::after {
+
+    &:hover
+      &::after
         background: #dcb03f;
-      }
-    }
-  }
-  .smaller :global(img) {
+
+  .smaller :global(img)
     max-height: 3.5rem !important;
-  }
+
 </style>
 
 <svelte:window bind:scrollY={y} bind:innerWidth={x} />

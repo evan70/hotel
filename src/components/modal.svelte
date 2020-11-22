@@ -142,7 +142,7 @@
     .active_slide{i}
       img
         margin-left (i * -5rem + 12rem)
-        margin-right (i * 5rem - 12rem)  
+        margin-right (i * 5rem - 12rem)
 </style>
 
 <svelte:window bind:scrollY={y} />
